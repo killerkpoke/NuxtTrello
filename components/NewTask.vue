@@ -28,15 +28,11 @@ function createTask(e: Event) {
             v-model="title"
             @keydown.tab="createTask"
             @keydown.enter="createTask"
-            class="focus:bg-white focus:shadow resize-none rounded w-full border-r-2"
-            :class="{
-                'h-7': !focused,
-                'h-20': focused
-            }"
+            class="focus:bg-white focus:shadow resize-none rounded-xl w-full border-r-2 p-4"
             style="outline: none !important;"
             @focus="focused = true"
             @blur="focused = false"
-            :placeholder="!focused ? '+ Add A a Card': 'Enter a title for this card'"
+            placeholder='Enter a title for this card'
         >
 
         </textarea>
